@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" type="images/png" href="images/favicon.png"/>
+        <title>VR: SCENE</title>
+        <script src="js/aframe.js"></script>
+
+
+    </head>
+    <body>
+    <a-scene>
+
+
+        <!--         Floor -->
+        <a-entity id="floor" geometry="primitive: box; depth: 18; height: 0.1; width: 30" position="0 -0.5 2" 
+                  material="shader: flat; src: url(images/floor2.jpg); repeat: 10 10"></a-entity>
+        <!-- Walls -->
+        <a-entity id="front-wall" geometry="primitive: box; depth: 0.2; height: 7.5; width: 30" position="0 3.0 -6.5" 
+                  material="shader: standard; side: double; src: url(images/wall.jpg);  "></a-entity>
+
+        <a-entity id="back-wall" geometry="primitive: box; depth: 0.2; height: 7.5; width: 30" position="0 3.0 11.1" 
+                  material="shader: standard; side: double; src: url(images/wall.jpg);"></a-entity>
+
+        <a-entity id="right-wall" geometry="primitive: box; depth: 18; height: 7.5; width: 0.2" position="15 3 2" 
+                  material="shader: standard; side: double; src: url(images/wall.jpg);"></a-entity>
+
+        <a-entity id="left-wall" geometry="primitive: box; depth: 18; height: 7.5; width: 0.2" position="-15 3 2" 
+                  material="shader: standard; side: double; src: url(images/wall.jpg);"></a-entity>
+
+        <!-- Ceiling -->
+        <!--        <a-entity geometry="primitive: box; depth: 20; height: 0.5; width: 35" position="0 7.5 2" material="shader: flat;  metalness: 0.8;
+                          src: url(images/ceiling.jpg);"></a-entity>-->
+
+
+        <!-- Camera -->
+        <a-entity id="camera"position="0 0 0">
+            <a-camera></a-camera>
+        </a-entity>
+
+
+
+    </a-scene>
+</body>
+</html>
