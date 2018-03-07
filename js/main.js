@@ -7,6 +7,7 @@ window.onload = function () {
     };
 };
 
+
 // Component to change to a sequential image on click.
 AFRAME.registerComponent('cursor-listener', {
   init: function () {

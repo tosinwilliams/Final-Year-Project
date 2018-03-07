@@ -20,15 +20,17 @@
         </div>
 
     <a-scene>
-        <a-entity mobile></a-entity>
-
         <!--Asset Manager-->
         <a-assets>
             <a-asset-item src="models/plant.gltf"></a-asset-item>
             <a-asset-item src="models/chair1.gltf"></a-asset-item>
             <a-asset-item src="models/sofa1.gltf"></a-asset-item>
             <a-asset-item src="models/chair2.gltf"></a-asset-item>
-        </a-assets>
+            <video id="vid" autoplay src="images/vid.mp4"></video>
+        </a-assets
+        
+        <!--Floor and Ceilings -->
+        <a-entity>
 
         <!--Floor and Ceilings -->
         <a-entity id="floor" geometry="primitive: box; depth: 20; height: 0.1; width: 20" position="0 0 0" 
@@ -61,8 +63,8 @@
         <a-entity id="handle" geometry="height:0.24;depth:0.1100000000000001;width:2" material="color:grey" position="-1.678 1.44 -5.849"></a-entity>
         <a-entity id="handle-2" geometry="depth:0.1100000000000001;height:0.24;width:2" material="color:grey" position="1.693 1.44 -5.837"></a-entity>
         <a-entity material="color:black" geometry="depth:0.2;height:3;width:6" position="0 5.345 -8.849"></a-entity>
-        <a-entity material="src: url(images/vid.mp4);" loop="false" geometry="primitive:box; depth:0.2; height:2.5; width:5.5;" position="0 5.345 -8.849"></a-entity>
-
+        <!--        <a-entity material="src: url(images/vid.mp4);" loop="false" geometry="primitive:box; depth:0.2; height:2.5; width:5.5;" position="0 5.345 -8.849"></a-entity>-->
+        <a-video src="#vid" height="2.5" width="5.5" position="0 5.345 -8.683"></a-video>
         <!--Laptop and Table-->
         <a-entity id="Laptop and Table">
             <a-entity geometry="depth:2;height:2;width:0.2" material="side:double;src:images/black-wood.jpg" position="9.302 1 9"></a-entity>
@@ -159,7 +161,7 @@
         <a-entity>
             <a-text value="Click Below!" scale="2 2 2" rotation="0 90 0" position="-9.981 8.058 0.449" color="red"></a-text>        
             <a-plane  id="box" cursor-listener material="src:images/art1.jpg" 
-                    height="3" width="4" rotation="0 90 0" position="-9.981 6 -0.600"></a-plane>
+                      height="3" width="4" rotation="0 90 0" position="-9.981 6 -0.600"></a-plane>
         </a-entity>
 
         <!-- Camera -->
