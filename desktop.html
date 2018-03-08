@@ -24,7 +24,6 @@
         <a-assets>
             <a-asset-item src="models/plant.gltf"></a-asset-item>
             <a-asset-item src="models/chair1.gltf"></a-asset-item>
-            <a-asset-item src="models/sofa1.gltf"></a-asset-item>
             <a-asset-item src="models/chair2.gltf"></a-asset-item>
         </a-assets>
 
@@ -50,9 +49,6 @@
         <!--Models-->
         <a-entity gltf-model="models/plant.gltf" position="-7.413 2.835 -10.614" scale="0.005 0.005 0.005"></a-entity>
         <a-entity gltf-model="models/chair1.gltf" position="7.319 0 -6.526" rotation="0 -30 0" scale="0.040 0.040 0.040"></a-entity>
-        <a-entity gltf-model="models/c_table.gltf" position="1.791 0 -1" scale="3 3 3"></a-entity>
-        <a-entity gltf-model="models/c_table.gltf" scale="3 3 3" position="0 0 -2"></a-entity>
-        <a-entity gltf-model="models/sofa1.gltf" position="-1 1.286 7.314" scale="0.04 0.04 0.04" rotation="0 180 0"></a-entity>        
         <a-entity gltf-model="models/laptop.gltf" position="7.512 2.107 8.874" rotation="0 180 0" scale="0.006 0.006 0.006"></a-entity>
         <a-entity gltf-model="models/chair2.gltf" position="7.997 0.5 6.039" rotation="0 -45 0" scale="0.025 0.025 0.025"></a-entity>        
 
@@ -156,17 +152,14 @@
         <a-entity id="ait_plan" geometry="height:6;width:7;primitive:plane" material="src:images/ait1.jpg" position="-36.811 8.036 -15.431"></a-entity>
 
         <!-- Camera -->
-        <a-entity camera="userHeight: 4"
+        <a-entity camera="userHeight: 8"
                   universal-controls="movementControls: keyboard"
-            <a-cursor  material="color: red; shader: flat" ></a-cursor> 
+                  <a-cursor  material="color: red; shader: flat" ></a-cursor> 
         </a-entity>
 
         <a-entity link="title:Data Viz;href:index_1.html;image:url(images/art2.jpg);" 
                   position="-9.83 5.993 -3.908" 
                   rotation="0 90 0"></a-entity>
-
-
-
     </a-scene>
     <script src="js/main.js"></script>
 </body>
