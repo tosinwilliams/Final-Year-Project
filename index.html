@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tosin's Office VR</title>
+        <link rel="shortcut icon" type="images/png" href="images/favicon.png"/>
+        <script src="js/aframe.js"></script>
+        <script src="js/aframe-extras.min.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item src="models/tree.gltf"></a-asset-item>
+            <img id="sky" crossorigin="anonymous" src="images/sky.jpg">
+            <img id="ground" src="ground.jpg">
+        </a-assets>
+
+        <a-sky src="#sky"></a-sky>
+        <a-ocean position="-10.061 0.350 -10.013" rotation="-90 0 0"></a-ocean>
+
+        <a-sphere rotation="45 0 0" position="-333.271 350 -40" radius="70" src="images/jupiter.jpg" roughness="0.6"></a-sphere>
+
+        <a-sphere rotation="45 0 0" position="-44.277 50 -80.933" radius="30" src="images/earth.png" roughness="0.6">
+            <a-animation attribute="rotation" easing="linear" dur="10000" to="0 360 0" repeat="indefinite"> </a-animation>
+        </a-sphere>
+
+        <a-sphere rotation="45 0 0" position="69.295 77.711 -80.933" radius="30" src="images/mars.png" roughness="0.6"></a-sphere>
+
+
+        <a-entity position="53.448 47.625 -157.686" rotation="0 0 -19.99622705006573">
+            <a-sphere rotation="44.97718691776962 0 0" position="69.295 77.711 -80.933" radius="30" src="images/neptune.jpg" roughness="0.6"></a-sphere>
+        </a-entity>
+
+
+
+        <a-entity>
+            <a-animation attribute="position" dur="7000" from="-1 10 -5" to="-1 5 -5"></a-animation>
+
+            <a-text value="Take a look around!"></a-text>
+        </a-entity>
+        
+        <a-entity>
+            <a-animation attribute="position" delay="2000" dur="7000" from="-2 10 -5" to="-2 6 -5"></a-animation>
+
+            <a-text value="Click on the appropiate portal to enter the scene!"></a-text>
+        </a-entity>
+
+
+        <!-- Link Portals -->
+        <a-link link="title:Mobile Portal;href:mobile.html;image:url(images/earth.png);" 
+                position="-4 6 -5" 
+                rotation="0 0 0"></a-link>
+
+        <a-link link="title:Desktop Portal;href:desktop.html;image:url(images/jupiter.jpg);" 
+                position="4 6 -5" 
+                rotation="0 0 0"></a-link>
+
+
+
+        <a-entity gltf-model="models/tree.gltf" position="32.461 -0.855 -5.259" scale="0.1 0.1 0.1" rotation="0 -45 0"></a-entity>
+
+        <!-- Camera -->
+        <a-entity camera="userHeight: 6"
+                  universal-controls="movementControls: checkpoint"
+                  checkpoint-controls="mode: animate"> 
+            <a-cursor  material="color: red; shader: flat" ></a-cursor> 
+        </a-entity>
+    </a-scene>
+</body>
+</html>
