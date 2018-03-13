@@ -19,3 +19,10 @@ AFRAME.registerComponent('cursor-listener', {
     });
   }
 });
+
+//Component to automatically persist in vr
+AFRAME.registerComponent('auto-enter-vr', {
+  init: function () {
+    this.el.sceneEl.enterVR();
+  }
+});
