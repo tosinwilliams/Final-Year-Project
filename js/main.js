@@ -20,6 +20,24 @@ AFRAME.registerComponent('cursor-listener', {
   }
 });
 
+//// Component to activate spaceship animation on click
+//AFRAME.registerComponent('cursor-animator', {
+//  init: function () {
+//    this.el.addEventListener('click', function (evt) {
+//        //Code
+//      console.log('I was clicked at: ', evt.detail.intersection.point);
+//    });
+//  }
+//});
+
+    AFRAME.registerComponent('cursor-animator', {
+      init: function () {
+        this.el.addEventListener('click', function (evt) {
+          console.log('click')
+        });
+      }
+    });
+
 //Component to automatically persist in vr
 AFRAME.registerComponent('auto-enter-vr', {
   init: function () {
