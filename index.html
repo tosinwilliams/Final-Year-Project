@@ -8,7 +8,7 @@
         <script src="js/main.js"></script>
     </head>
     <body>
-    <a-scene auto-enter-vr>
+    <a-scene auto-enter-vr raycaster-autorefresh>
         <a-assets>
             <a-asset-item src="models/tree.gltf"></a-asset-item>
             <a-asset-item id="lol" src="models/spaceship.gltf"></a-asset-item>
@@ -100,14 +100,32 @@
 
 
         <a-entity gltf-model="models/tree.gltf" position="32.461 -0.855 -5.259" scale="0.1 0.1 0.1" rotation="0 -45 0"></a-entity>
-
-        <a-entity id="spaceship" gltf-model=#lol position="-20 0 -5" scale="2 2 2" rotation="0 180 0">
+        
+        <a-entity id="spaceship" gltf-model=#lol position="-20 0 -5" scale="3 3 3" rotation="0 180 0">
             <a-animation attribute="position" from="-20 0 -5" to="-20 0 -25" dur="5000"></a-animation>
             <a-animation attribute="position" from="-20 0 -25" to="-20 1000 -200" delay="5000" dur="9000"></a-animation>
             <a-animation attribute="rotation" from="0 180 0" to="0 0 0" delay="14000"></a-animation>
             <a-animation attribute="position" from="-20 1000 -200" to="-20 0 -25"  delay="15000" dur="9000"></a-animation>
             <a-animation attribute="position" from="-20 0 -25" to="-20 0 -5" delay="24000" dur="8000"></a-animation>
-            <a-animation attribute="rotation" from="0 0 0" to="0 180 0" delay="25000" dur="8000"></a-animation> 
+            <a-animation attribute="rotation" from="0 0 0" to="0 180 0" delay="25000" dur="8000"></a-animation>
+            <a-animation attribute="position" from="-20 0 -5" to="-20 0 -25" delay="33000" dur="5000"></a-animation>
+            <a-animation attribute="position" from="-20 0 -25" to="-20 1000 -200" delay="40000" dur="5000"></a-animation>
+            <a-animation attribute="rotation" from="0 180 0" to="0 0 0" delay="45000"></a-animation>
+            <a-animation attribute="position" from="-20 1000 -200" to="-20 0 -25"  delay="46000" dur="9000"></a-animation>
+            <a-animation attribute="position" from="-20 0 -25" to="-20 0 -5" delay="55000" dur="8000"></a-animation>
+            <a-animation attribute="rotation" from="0 0 0" to="0 180 0" delay="56000" dur="5000"></a-animation>
+            <a-animation attribute="position" from="-20 0 -5" to="-20 0 -25" delay="61000" dur="5000"></a-animation>
+            <a-animation attribute="position" from="-20 0 -25" to="-20 1000 -200" delay="66000" dur="9000"></a-animation>
+            <a-animation attribute="rotation" from="0 180 0" to="0 0 0" delay="75000"></a-animation>
+            <a-animation attribute="position" from="-20 1000 -200" to="-20 0 -25"  delay="76000" dur="9000"></a-animation>
+            <a-animation attribute="position" from="-20 0 -25" to="-20 0 -5" delay="85000" dur="8000"></a-animation>
+            <a-animation attribute="rotation" from="0 0 0" to="0 180 0" delay="86000" dur="5000"></a-animation>
+            <a-animation attribute="position" from="-20 0 -5" to="-20 0 -25" delay="91000" dur="5000"></a-animation>
+            <a-animation attribute="position" from="-20 0 -25" to="-20 1000 -200" delay="96000" dur="9000"></a-animation>
+            <a-animation attribute="rotation" from="0 180 0" to="0 0 0" delay="105000"></a-animation>
+            <a-animation attribute="position" from="-20 1000 -200" to="-20 0 -25"  delay="106000" dur="9000"></a-animation>
+            <a-animation attribute="position" from="-20 0 -25" to="-20 0 -5" delay="115000" dur="8000"></a-animation>
+            <a-animation attribute="rotation" from="0 0 0" to="0 180 0" delay="116000" dur="5000"></a-animation>
         </a-entity>
 
 
