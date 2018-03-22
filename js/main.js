@@ -11,7 +11,7 @@ window.onload = function () {
 AFRAME.registerComponent('cursor-listener', {
     init: function () {
         var lastIndex = -1;
-        var IMAGES = ['images/art1.jpg', 'images/art2.jpg', 'images/art3.jpg', 'images/art4.jpg', 'images/art5.jpg', ];
+        var IMAGES = ['images/art1.jpg', 'images/art2.jpg', 'images/art3.jpg', 'images/art4.jpg', 'images/art5.jpg'];
         this.el.addEventListener('click', function (evt) {
             lastIndex = (lastIndex + 1) % IMAGES.length;
             this.setAttribute('material', 'src', IMAGES[lastIndex]);
@@ -26,6 +26,7 @@ AFRAME.registerComponent('auto-enter-vr', {
         this.el.sceneEl.enterVR();
     }
 });
+
 
 AFRAME.registerComponent('raycaster-autorefresh', {
     init: function () {
