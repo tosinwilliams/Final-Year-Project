@@ -6,11 +6,93 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Data Visualization</title>
+        <link rel="shortcut icon" type="images/png" href="images/favicon.png"/>
+        <script src="js/aframe.js"></script>
+        <script src="js/aframe-extras.min.js"></script>
     </head>
     <body>
-        <div>TODO write content</div>
-    </body>
+    <a-scene>
+
+        <!--Slide-show-->
+
+        <a-entity id="1.1" geometry="height:10;width:10;primitive:plane" material="src:images/avv_terrorism_label.png" position="0 6 -10">
+            <a-animation attribute="position" begin="5000" dur="100" to="0 -10000 -150"></a-animation>
+        </a-entity>
+
+        <a-entity id="1.2" geometry="height:7;width:10;primitive:plane" material="src:images/avv_terrorism_label_2.png" position="0 1000 -10">
+            <a-animation attribute="position" begin="5000" dur="100" to="0 6 -10"></a-animation>
+            <a-animation attribute="position" begin="12000" dur="100" to="0 -1000 -10"></a-animation>        
+        </a-entity>
+
+        <a-entity id="1.3" geometry="height:200;width:100;primitive:plane" material="src:images/avv_terrorism.png" position="0 1000 -150">
+            <a-animation attribute="position" begin="12000" dur="100" to="0 6 -150"></a-animation>
+            <a-animation attribute="position" begin="22000" dur="100" to="0 -1000 -150"></a-animation>
+        </a-entity>
+
+        <a-entity id="2.1" geometry="height:7;width:10;primitive:plane" material="src:images/donald_trump_label.png" position="0 1000 -150">
+            <a-animation attribute="position" begin="22000" dur="100" to="0 6 -10"></a-animation>
+            <a-animation attribute="position" begin="30000" dur="100" to="0 -1000 -10"></a-animation>
+        </a-entity>
+
+        <a-entity id="2.2" geometry="height:150;width:100;primitive:plane" material="src:images/donald_trump_data.png" position="0 1000 -150">
+            <a-animation attribute="position" begin="31000" dur="100" to="0 6 -100"></a-animation>
+            <a-animation attribute="position" begin="41000" dur="100" to="0 -1000 -100"></a-animation>
+        </a-entity>
+
+
+        <a-entity id="3.1" geometry="height:7;width:10;primitive:plane" material="src:images/mwvmg_label.png" position="0 1000 -150">
+            <a-animation attribute="position" begin="42000" dur="100" to="0 6 -10"></a-animation>
+            <a-animation attribute="position" begin="50000" dur="100" to="0 -1000 -10"></a-animation>
+        </a-entity>
+
+        <a-entity id="3.2" geometry="height:120;width:200;primitive:plane" material="src:images/mwvmg.png" position="0 1000 -150">
+            <a-animation attribute="position" begin="50000" dur="100" to="0 6 -100"></a-animation>
+            <a-animation attribute="position" begin="60000" dur="100" to="0 -1000 -100"></a-animation>
+        </a-entity>
+
+
+        <a-entity id="4.1" geometry="height:7;width:10;primitive:plane" material="src:images/wedding_label.png" position="0 1000 -150">
+            <a-animation attribute="position" begin="60000" dur="100" to="0 6 -10"></a-animation>
+            <a-animation attribute="position" begin="67000" dur="100" to="0 -1000 -10"></a-animation>
+        </a-entity>
+
+        <a-entity id="4.2" geometry="height:120;width:200;primitive:plane" material="src:images/wedding.png" position="0 1000 -150">
+            <a-animation attribute="position" begin="68000" dur="100" to="0 6 -100"></a-animation>
+            <a-animation attribute="position" begin="78000" dur="100" to="0 -1000 -100"></a-animation>
+        </a-entity>
+
+
+        <a-entity id="5.1" geometry="height:7;width:10;primitive:plane" material="src:images/katrina_label.png" position="0 1000 -150">
+            <a-animation attribute="position" begin="79000" dur="100" to="0 6 -10"></a-animation>
+            <a-animation attribute="position" begin="85000" dur="100" to="0 -1000 -10"></a-animation>
+        </a-entity>
+
+        <a-entity id="5.2" geometry="height:120;width:200;primitive:plane" material="src:images/katrina.png" position="0 1000 -150">
+            <a-animation attribute="position" begin="85000" dur="100" to="0 6 -100"></a-animation>
+            <a-animation attribute="position" begin="95000" dur="100" to="0 -1000 -100"></a-animation>
+        </a-entity>
+
+        <a-entity id="6.1" geometry="height:7;width:10;primitive:plane" material="src:images/barack_label.png" position="0 1000 -150">
+            <a-animation attribute="position" begin="95000" dur="100" to="0 6 -10"></a-animation>
+            <a-animation attribute="position" begin="100000" dur="100" to="0 -1000 -10"></a-animation>
+        </a-entity>
+
+        <a-entity id="6.2" geometry="height:120;width:200;primitive:plane" material="src:images/barack.png" position="0 1000 -150">
+            <a-animation attribute="position" begin="100000" dur="100" to="0 6 -100"></a-animation>
+            <a-animation attribute="position" begin="110000" dur="100" to="0 -1000 -100"></a-animation>
+        </a-entity>
+
+
+
+        <!-- Camera -->
+        <a-entity>
+            <a-entity camera="userHeight: 6"
+                      universal-controls="movementControls: checkpoint"
+                      checkpoint-controls="mode: animate"> 
+                <!--                <a-cursor  material="color: red; shader: flat" ></a-cursor> -->
+            </a-entity> 
+        </a-entity>
+    </a-scene>
+</body>
 </html>
