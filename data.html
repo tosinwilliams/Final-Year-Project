@@ -12,7 +12,7 @@ and open the template in the editor.
         <script src="js/aframe-extras.min.js"></script>
     </head>
     <body>
-    <a-scene>
+    <a-scene auto-enter-vr>
 
         <!--Slide-show-->
 
@@ -83,6 +83,11 @@ and open the template in the editor.
             <a-animation attribute="position" begin="110000" dur="100" to="0 -1000 -100"></a-animation>
         </a-entity>
 
+            <a-link link="title:HOMEPAGE;href:index.html;image:url(images/neptune.jpg);"position="0 1000 -10" rotation="0 0 0">
+                <a-animation attribute="position" begin="110000" rotation="0 0 0" dur="100" to="0 6 -10"></a-animation>
+            </a-link>
+
+
 
 
         <!-- Camera -->
@@ -90,7 +95,7 @@ and open the template in the editor.
             <a-entity camera="userHeight: 6"
                       universal-controls="movementControls: checkpoint"
                       checkpoint-controls="mode: animate"> 
-                <!--                <a-cursor  material="color: red; shader: flat" ></a-cursor> -->
+                <a-cursor  material="color: red; shader: flat" ></a-cursor> 
             </a-entity> 
         </a-entity>
     </a-scene>
