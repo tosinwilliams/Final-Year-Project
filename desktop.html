@@ -6,6 +6,16 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="js/aframe.js"></script>
         <script src="js/aframe-extras.min.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            window.onload = function () {
+                var startExperienceBtn = document.getElementById('start_experience');
+                startExperienceBtn.onclick = function () {
+                    document.getElementById('container').outerHTML = '';
+                    document.getElementsByTagName('a-scene')[0].style.zIndex = 'auto';
+                };
+            };
+        </script>
     </head>
     <body>
         <div id="container" class="container">
@@ -168,6 +178,5 @@
                   position="0.085 8.15 -8.897" 
                   rotation="0 0 0"></a-entity>
     </a-scene>
-    <script src="js/main.js"></script>
 </body>
 </html>

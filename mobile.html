@@ -10,11 +10,12 @@
     <body>
     <a-scene auto-enter-vr>
         <!--Asset Manager-->
-        <a-assets>
-            <a-asset-item src="models/plant.gltf"></a-asset-item>
-            <a-asset-item src="models/chair1.gltf"></a-asset-item>
-            <a-asset-item src="models/chair2.gltf"></a-asset-item>
-            <video id="vid" autoplay src="images/vid.mp4"></video>
+        <a-assets timeout="10000">
+            <a-asset-item id="plant" src="models/plant.gltf"></a-asset-item>
+            <a-asset-item id="chair1" src="models/chair1.gltf"></a-asset-item>
+            <a-asset-item id="chair2" src="models/chair2.gltf"></a-asset-item>
+            <a-asset-item id="laptop" src="models/laptop.gltf"></a-asset-item>
+            <video id="vid" autoplay="true" src="images/vid.mp4"></video>
         </a-assets
 
         <!--Floor and Ceilings -->
@@ -40,10 +41,10 @@
             <a-entity id="conference-floor-2" geometry="depth:41;width:16;height:0.1" position="-37.642 12.972 4.272" material="color:white"></a-entity>
 
             <!--Models-->
-            <a-entity gltf-model="models/plant.gltf" position="-7.413 2.835 -10.614" scale="0.005 0.005 0.005"></a-entity>
-            <a-entity gltf-model="models/chair1.gltf" position="7.319 0 -6.526" rotation="0 -30 0" scale="0.040 0.040 0.040"></a-entity>
-            <a-entity gltf-model="models/laptop.gltf" position="7.512 2.107 8.874" rotation="0 180 0" scale="0.006 0.006 0.006"></a-entity>
-            <a-entity gltf-model="models/chair2.gltf" position="7.997 0.5 6.039" rotation="0 -45 0" scale="0.025 0.025 0.025"></a-entity>        
+            <a-entity gltf-model="#plant" position="-7.413 2.835 -10.614" scale="0.005 0.005 0.005"></a-entity>
+            <a-entity gltf-model="#chair1" position="7.319 0 -6.526" rotation="0 -30 0" scale="0.040 0.040 0.040"></a-entity>
+            <a-entity gltf-model="#laptop" position="7.512 2.107 8.874" rotation="0 180 0" scale="0.006 0.006 0.006"></a-entity>
+            <a-entity gltf-model="#chair2" position="7.997 0.5 6.039" rotation="0 -45 0" scale="0.025 0.025 0.025"></a-entity>        
 
             <!--TV and Table-->
             <a-entity id="table" geometry="height:2;width:7;depth:3" material="src:images/wood3.jpg" position="0 1.152 -7.391"></a-entity>
